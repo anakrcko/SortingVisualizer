@@ -1,0 +1,135 @@
+.legend{
+    color:#3a6186;
+    display: flex;
+    font-size: 1.2em;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 0 10px;
+}
+
+.legendList{
+    align-items: center;
+    display: flex;
+}
+
+
+.lg{
+    display: inline-block;
+    height: 20px;
+    margin: 0 10px;
+    width: 20px;
+    border: 1px solid #3a6186;
+}
+
+.compare{
+    background-color: #d3ed0e;
+}
+
+.swap {
+    background-color: #d60606;
+}
+
+.sorted{
+    background-color: #4bc52e;
+}
+
+@media(max-width: 564px){
+    .legends{
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
+.desc{
+    background: rgba(5,199,37,1);
+    background: linear-gradient(308deg, rgba(5,199,37,1) 0%, rgba(41,21,173,1) 100%);
+}
+
+/**/
+
+/**/
+
+.codeLanguage{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    min-height: 20%;
+  }
+  
+  .codeLanguage > p, .right{
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+   .codeL{
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  
+  .codeL{
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    min-height: 50px;
+    min-width: 200px;
+  }
+  
+ .codeLSelekt{
+    width: 150px;
+  }
+  
+  .codeL select {
+    background: #3a6186;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 13px 10px;
+  }
+  
+
+  /**/
+
+  pre code {
+    background-color: #272822;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+
+  /**/
+.codeArea{
+  min-width: 100%;
+}
+  
+.red {
+  color:#f92672 ;
+}
+.blue {
+  color:#66d9ef;
+}
+.comment {
+  color:#635f4f;
+}
+.print {
+  color:#d4ca6c;
+}
+
+.number {
+  color:#8e6ccb;
+}
+
+.variables {
+  color:#d89740;
+}

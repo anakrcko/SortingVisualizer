@@ -1,0 +1,15 @@
+.foot {
+   
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    min-height: 20%;
+}
+
+.foot >p {
+    font-family: VT323, monospace;
+    color: #3a6186;
+    font-size: 1.2em;
+   padding: 10px;
+}

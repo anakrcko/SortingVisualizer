@@ -1,0 +1,43 @@
+.menu{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    min-height: 20%;
+    background: rgb(41,21,173);
+    background: linear-gradient(308deg, rgba(41,21,173,1) 0%, rgba(5,199,37,1) 100%);
+}
+
+.menu > p, .right{
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    font-size: 1.2em;
+   padding: 10px;
+}
+.menu >p {
+    float: left;
+}
+.right{
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    min-height: 50px;
+    min-width: 180px;
+}
+
+.right select{
+    min-width: 70%;
+}
+
+.right select {
+    background: #3a6186;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 13px 10px;
+}

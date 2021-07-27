@@ -1,0 +1,125 @@
+.list{
+    margin: 0 auto;
+    min-height: 600px;
+    min-width: 85%;
+    text-align: center;
+}
+
+.list > .value{
+    background-color: turquoise;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition-duration: 150ms;
+    transition-property: height;
+    transition-timing-function: ease-in;
+}
+
+/**/
+
+
+.settings{
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    min-height: 50px;
+    min-width: 200px;
+    background: rgb(41,21,173);
+    background: linear-gradient(308deg, rgba(41,21,173,1) 0%, rgba(5,199,37,1) 100%);
+}
+
+.settings label{
+    font-family: VT323, monospace;
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+}
+
+.settings button{
+    border-radius: 5px;
+    color: whitesmoke;
+    background: #3a6186;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+    outline: none;
+    padding: 13px 10px;
+    width:90%;
+}
+
+.settings select, input[type='range']{
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.settings input, .settings select, .settings button{
+    min-width: 90%;
+}
+
+.settings select {
+    background: #3a6186;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 5px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    font-size: 1em;
+    padding: 13px 10px;
+}
+
+
+
+@media(max-width: 992px){
+    .menu{
+        flex-direction: column;
+    }
+
+    .settings{
+        display: block;
+        text-align: center;
+    }
+
+    .settings > div{
+        margin: 10px 0;
+    }
+}
+
+  /**/
+
+.settings  ul  {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .settings  li {
+      margin-bottom: 15px;
+  }
+
+/**/
+
+.column1 {
+    margin-top: 15px;
+    float: left;
+    width: 15%;
+    padding: 10px;
+    /* height: 400px; */
+  }
+  .column2 {
+    float: left;
+    width: 85%;
+    padding: 10px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+

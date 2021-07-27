@@ -1,0 +1,75 @@
+.description {
+  text-align: left;
+  width: 80%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.356);
+
+}
+
+.desc_body li {
+  line-height: 1.5;
+}
+
+.desc_body a {
+  color: turquoise ;
+  font-weight: bold;
+}
+
+.desc_body a:hover {
+  color: blue ;
+}
+
+.performance td {
+  padding: 0.5rem 0;
+}
+
+.performance h3 {
+  margin: 1rem 0;
+}
+
+.performance span {
+  padding-left: 2rem;
+  font-weight:  bolder;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .performance {
+    padding-left: 2ch;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .performance {
+    width: 55ch;
+    padding-right: 5ch;
+  }
+
+  .performance {
+    padding-left: 5ch;
+    border-left: 1px solid var(--text-color);
+  }
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+}
+.row {
+  display: flex;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
