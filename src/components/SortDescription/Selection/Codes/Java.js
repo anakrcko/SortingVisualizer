@@ -5,53 +5,54 @@ export default function Java(){
                 <code>
                     {
                     `
-// Java program for implementation of Selection Sort
-class SelectionSort
+`}<span className='comment'>{`// Java program for implementation of Selection Sort`}</span>{`
+`}<span className='red'>{`class`}</span>{` SelectionSort
 {
-	void sort(int arr[])
+	`}<span className='red'>{`void`}</span>{` sort(`}<span className='red'>{`int`}</span>{` arr[])
 	{
-		int n = arr.length;
+		`}<span className='red'>{`int`}</span>{` n = arr.length;
 
-		// One by one move boundary of unsorted subarray
-		for (int i = 0; i < n-1; i++)
+		`}<span className='comment'>{`// One by one move boundary of unsorted subarray`}</span>{`
+		`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` i = `}<span className='number'>{`0`}</span>{`; i < n-`}<span className='number'>{`1`}</span>{`; i++)
 		{
-			// Find the minimum element in unsorted array
-			int min_idx = i;
-			for (int j = i+1; j < n; j++)
-				if (arr[j] < arr[min_idx])
+			`}<span className='comment'>{`// Find the minimum element in unsorted array`}</span>{`
+			`}<span className='red'>{`int`}</span>{` min_idx = i;
+			`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` j = i+`}<span className='number'>{`1`}</span>{`; j < n; j++)
+				`}<span className='red'>{`if`}</span>{` (arr[j] < arr[min_idx])
 					min_idx = j;
 
-			// Swap the found minimum element with the first
-			// element
-			int temp = arr[min_idx];
+			`}<span className='comment'>{`// Swap the found minimum element with the first
+			// element`}</span>{`
+			`}<span className='red'>{`int`}</span>{` temp = arr[min_idx];
 			arr[min_idx] = arr[i];
 			arr[i] = temp;
 		}
 	}
 
-	// Prints the array
-	void printArray(int arr[])
+	`}<span className='comment'>{`// Prints the array`}</span>{`
+	`}<span className='red'>{`void`}</span>{` printArray(`}<span className='red'>{`int`}</span>{` arr[])
 	{
-		int n = arr.length;
-		for (int i=0; i<n; ++i)
-			System.out.print(arr[i]+" ");
+		`}<span className='red'>{`int`}</span>{` n = arr.length;
+		`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` i=`}<span className='number'>{`0`}</span>{` ; i<n; ++i)
+			System.out.print(arr[i]+`}<span className='print'>{`" "`}</span>{`);
 		System.out.println();
 	}
 
-	// Driver code to test above
-	public static void main(String args[])
+	`}<span className='comment'>{`// Driver code to test above`}</span>{`
+	`}<span className='red'>{`public static void`}</span>{` main(String args[])
 	{
-		SelectionSort ob = new SelectionSort();
-		int arr[] = {64,25,12,22,11};
+		SelectionSort ob = `}<span className='red'>{`new`}</span>{` SelectionSort();
+		`}<span className='red'>{`int`}</span>{` arr[] = {`}<span className='number'>{`64`}</span>{`,`}<span className='number'>{`25`}</span>{`,`}<span className='number'>{`12`}</span>{`,`}<span className='number'>{`22`}</span>{`,`}<span className='number'>{`11`}</span>{`};
 		ob.sort(arr);
-		System.out.println("Sorted array");
+		System.out.println(`}<span className='print'>{`"Sorted array:"`}</span>{`);
 		ob.printArray(arr);
 	}
 }
-/* This code is contributed by Rajat Mishra*/
+`}<span className='comment'>{`/* This code is contributed by Rajat Mishra*/`}</span>{`
+`} <hr/> {` Output:
 
-                    `
-                    }
+Sorted array: 
+11 12 22 25 64`}
                 </code>
             </pre>
         </div>

@@ -6,51 +6,52 @@ export default function JavaScript(){
                     {
                     `
 <script>
-// Javascript program for implementation of selection sort
-function swap(arr,xp, yp)
+`}<span className='comment'>{`// Javascript program for implementation of selection sort`}</span>{`
+`}<span className='red'>{`function`}</span>{` swap(arr,xp, yp)
 {
-	var temp = arr[xp];
+	`}<span className='red'>{`var`}</span>{` temp = arr[xp];
 	arr[xp] = arr[yp];
 	arr[yp] = temp;
 }
 
-function selectionSort(arr, n)
+`}<span className='red'>{`function`}</span>{` selectionSort(arr, n)
 {
-	var i, j, min_idx;
+	`}<span className='red'>{`var`}</span>{` i, j, min_idx;
 
-	// One by one move boundary of unsorted subarray
-	for (i = 0; i < n-1; i++)
+	`}<span className='comment'>{`// One by one move boundary of unsorted subarray`}</span>{`
+	`}<span className='red'>{`for`}</span>{` (i = 0; i < n-1; i++)
 	{
-		// Find the minimum element in unsorted array
+		`}<span className='comment'>{`// Find the minimum element in unsorted array`}</span>{`
 		min_idx = i;
-		for (j = i + 1; j < n; j++)
-		if (arr[j] < arr[min_idx])
+		`}<span className='red'>{`for`}</span>{` (j = i + 1; j < n; j++)
+		`}<span className='red'>{`if`}</span>{` (arr[j] < arr[min_idx])
 			min_idx = j;
 
-		// Swap the found minimum element with the first element
+		`}<span className='comment'>{`// Swap the found minimum element with the first element`}</span>{`
 		swap(arr,min_idx, i);
 	}
 }
 
-function printArray( arr, size)
+`}<span className='red'>{`function`}</span>{` printArray( arr, size)
 {
-	var i;
-	for (i = 0; i < size; i++)
-		document.write(arr[i] + " ");
-	document.write(" <br>");
+	`}<span className='red'>{`var`}</span>{` i;
+	`}<span className='red'>{`for`}</span>{` (i = 0; i < size; i++)
+		document.write(arr[i] + `}<span className='print'>{`" "`}</span>{`);
+	document.write(`}<span className='print'>{`" <br>"`}</span>{`);
 }
 
-var arr = [64, 25, 12, 22, 11];
-	var n = 5;
+`}<span className='red'>{`var`}</span>{` arr = [64, 25, 12, 22, 11];
+	`}<span className='red'>{`var`}</span>{` n = 5;
 	selectionSort(arr, n);
-	document.write("Sorted array: <br>");
+	document.write(`}<span className='print'>{`"Sorted array: <br>"`}</span>{`);
 	printArray(arr, n);
 
-// This code is contributed by akshitsaxenaa09.
+`}<span className='comment'>{`// This code is contributed by akshitsaxenaa09.`}</span>{`
 </script>
+`} <hr/> {` Output:
 
-                    `
-                    }
+Sorted array: 
+11 12 22 25 64`}
                 </code>
             </pre>
         </div>

@@ -5,56 +5,58 @@ export default function C(){
                 <code>
                     {
                     `
-// C program for implementation of selection sort
+`}<span className='comment'>{`// C program for implementation of selection sort`}</span>{`
 #include <stdio.h>
 
-void swap(int *xp, int *yp)
+`}<span className='red'>{`void`}</span>{` swap(`}<span className='blue'>{`int`}</span>{` *xp, `}<span className='blue'>{`int`}</span>{` *yp)
 {
-	int temp = *xp;
+	`}<span className='blue'>{`int`}</span>{` temp = *xp;
 	*xp = *yp;
 	*yp = temp;
 }
 
-void selectionSort(int arr[], int n)
+`}<span className='red'>{`void`}</span>{` selectionSort(`}<span className='blue'>{`int`}</span>{` arr[], `}<span className='blue'>{`int`}</span>{` n)
 {
-	int i, j, min_idx;
+	`}<span className='blue'>{`int`}</span>{` i, j, min_idx;
 
-	// One by one move boundary of unsorted subarray
-	for (i = 0; i < n-1; i++)
+	`}<span className='comment'>{`// One by one move boundary of unsorted subarray`}</span>{`
+	`}<span className='red'>{`for`}</span>{` (i = 0; i < n-1; i++)
 	{
-		// Find the minimum element in unsorted array
+		`}<span className='comment'>{`// Find the minimum element in unsorted array`}</span>{`
 		min_idx = i;
-		for (j = i+1; j < n; j++)
-		if (arr[j] < arr[min_idx])
+		`}<span className='red'>{`for`}</span>{` (j = i+1; j < n; j++)
+		`}<span className='red'>{`if`}</span>{` (arr[j] < arr[min_idx])
 			min_idx = j;
 
-		// Swap the found minimum element with the first element
+		`}<span className='comment'>{`// Swap the found minimum element with the first element`}</span>{`
 		swap(&arr[min_idx], &arr[i]);
 	}
 }
 
-/* Function to print an array */
-void printArray(int arr[], int size)
+`}<span className='comment'>{`/* Function to print an array */`}</span>{`
+`}<span className='red'>{`void`}</span>{` printArray(`}<span className='blue'>{`int`}</span>{` arr[], `}<span className='blue'>{`int`}</span>{` size)
 {
-	int i;
-	for (i=0; i < size; i++)
-		printf("%d ", arr[i]);
-	printf("\n");
+	`}<span className='blue'>{`int`}</span>{` i;
+	`}<span className='red'>{`for`}</span>{` (i=0; i < size; i++)
+		`}<span className='blue'>{`printf`}</span>{`(`}<span className='print'>{`"%d "`}</span>{`, arr[i]);
+	`}<span className='blue'>{`printf`}</span>{`(`}<span className='print'>{`"\\n"`}</span>{`);
 }
 
-// Driver program to test above functions
-int main()
+`}<span className='comment'>{`// Driver program to test above functions`}</span>{`
+`}<span className='blue'>{`int`}</span>{` main()
 {
-	int arr[] = {64, 25, 12, 22, 11};
-	int n = sizeof(arr)/sizeof(arr[0]);
+	`}<span className='blue'>{`int`}</span>{` arr[] = {64, 25, 12, 22, 11};
+	`}<span className='blue'>{`int`}</span>{` n = `}<span className='red'>{`sizeof`}</span>{`(arr)/`}<span className='red'>{`sizeof`}</span>{`(arr[0]);
 	selectionSort(arr, n);
-	printf("Sorted array: \n");
+	`}<span className='blue'>{`printf`}</span>{`(`}<span className='print'>{`"Sorted array: \\n"`}</span>{`);
 	printArray(arr, n);
-	return 0;
+	`}<span className='red'>{`return`}</span>{` 0;
 }
 
-                    `
-                    }
+`} <hr/> {` Output:
+
+Sorted array: 
+11 12 22 25 64`}
                 </code>
             </pre>
         </div>

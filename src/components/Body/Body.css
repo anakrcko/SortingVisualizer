@@ -53,10 +53,9 @@
 
 .codeLanguage{
     align-items: center;
-    display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    min-height: 20%;
+    /* padding: 0 20px;
+    min-height: 20%; */
   }
   
   .codeLanguage > p, .right{
@@ -104,8 +103,7 @@
     background-color: #272822;
     border: 1px solid #999;
     display: block;
-    padding: 20px;
-    width: 100%;
+    padding: 30px;
   }
 
   /**/

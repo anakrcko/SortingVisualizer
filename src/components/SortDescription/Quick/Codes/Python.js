@@ -3,66 +3,70 @@ export default function PyhonCode(){
         <div>
             <pre>
                 <code>{`
-# Python3 implementation of QuickSort
+`}<span className='comment'>{`# Python3 implementation of QuickSort
 
 # This Function handles sorting part of quick sort
 # start and end points to first and last element of
-# an array respectively
-def partition(start, end, array):
+# an array respectively`}</span>{`
+`}<span className='red'>{`def`}</span>{` partition(start, end, array):
 	
-	# Initializing pivot's index to start
-	pivot_index = start
-	pivot = array[pivot_index]
+	`}<span className='comment'>{`# Initializing pivot's index to start`}</span>{`
+	pivot_index `}<span className='red'>{`=`}</span>{` start
+	pivot `}<span className='red'>{`=`}</span>{` array[pivot_index]
 	
-	# This loop runs till start pointer crosses
+	`}<span className='comment'>{`# This loop runs till start pointer crosses
 	# end pointer, and when it does we swap the
-	# pivot with element on end pointer
-	while start < end:
+	# pivot with element on end pointer`}</span>{`
+	`}<span className='red'>{`while`}</span>{` start < end:
 		
-		# Increment the start pointer till it finds an
-		# element greater than pivot
-		while start < len(array) and array[start] <= pivot:
-			start += 1
+		`}<span className='comment'>{`# Increment the start pointer till it finds an
+		# element greater than pivot`}</span>{`
+		`}<span className='red'>{`while`}</span>{` start < `}<span className='blue'>{`len`}</span>{`(array) `}<span className='red'>{`and`}</span>{` array[start] <`}<span className='red'>{`=`}</span>{` pivot:
+			start `}<span className='red'>{`+=`}</span>{` `}<span className='number'>{`1`}</span>{`
 			
-		# Decrement the end pointer till it finds an
-		# element less than pivot
-		while array[end] > pivot:
-			end -= 1
+		`}<span className='comment'>{`# Decrement the end pointer till it finds an
+		# element less than pivot`}</span>{`
+		`}<span className='red'>{`while`}</span>{` array[end] > pivot:
+			end `}<span className='red'>{`-=`}</span>{``}<span className='number'>{` 1`}</span>{`
 		
-		# If start and end have not crossed each other,
-		# swap the numbers on start and end
-		if(start < end):
-			array[start], array[end] = array[end], array[start]
+		`}<span className='comment'>{`# If start and end have not crossed each other,
+		# swap the numbers on start and end`}</span>{`
+		`}<span className='red'>{`if`}</span>{`(start < end):
+			array[start], array[end] `}<span className='red'>{`=`}</span>{` array[end], array[start]
 	
-	# Swap pivot element with element on end pointer.
-	# This puts pivot on its correct sorted place.
-	array[end], array[pivot_index] = array[pivot_index], array[end]
+	`}<span className='comment'>{`# Swap pivot element with element on end pointer.
+	# This puts pivot on its correct sorted place.`}</span>{`
+	array[end], array[pivot_index] `}<span className='red'>{`=`}</span>{` array[pivot_index], array[end]
 	
-	# Returning end pointer to divide the array into 2
-	return end
+	`}<span className='comment'>{`# Returning end pointer to divide the array into 2`}</span>{`
+	`}<span className='red'>{`return`}</span>{` end
 	
-# The main function that implements QuickSort
-def quick_sort(start, end, array):
+`}<span className='comment'>{`# The main function that implements QuickSort`}</span>{`
+`}<span className='red'>{`def`}</span>{` quick_sort(start, end, array):
 	
-	if (start < end):
+	`}<span className='red'>{`if`}</span>{` (start < end):
 		
-		# p is partitioning index, array[p]
-		# is at right place
-		p = partition(start, end, array)
+		`}<span className='comment'>{`# p is partitioning index, array[p]
+		# is at right place`}</span>{`
+		p `}<span className='red'>{`=`}</span>{` partition(start, end, array)
 		
-		# Sort elements before partition
-		# and after partition
-		quick_sort(start, p - 1, array)
-		quick_sort(p + 1, end, array)
+		`}<span className='comment'>{`# Sort elements before partition
+		# and after partition`}</span>{`
+		quick_sort(start, p `}<span className='red'>{`-`}</span>{` `}<span className='number'>{`1`}</span>{`, array)
+		quick_sort(p `}<span className='red'>{`+`}</span>{` `}<span className='number'>{`1`}</span>{`, end, array)
 		
-# Driver code
-array = [ 10, 7, 8, 9, 1, 5 ]
-quick_sort(0, len(array) - 1, array)
+`}<span className='comment'>{`# Driver code`}</span>{`
+array`}<span className='red'>{` = `}</span>{`[ `}<span className='number'>{`10`}</span>{`, `}<span className='number'>{`7`}</span>{`, `}<span className='number'>{`8`}</span>{`, `}<span className='number'>{`9`}</span>{`, `}<span className='number'>{`1`}</span>{`, `}<span className='number'>{`5`}</span>{` ]
+quick_sort(`}<span className='number'>{`0`}</span>{`, `}<span className='blue'>{`len`}</span>{`(array) `}<span className='red'>{`-`}</span>{` `}<span className='number'>{`1`}</span>{`, array)
 
-print(f'Sorted array: {array}')
+`}<span className='blue'>{`print`}</span>{`(f`}<span className='print'>{`'Sorted array: {array}'`}</span>{`)
 	
-# This code is contributed by Adnan Aliakbar
+`}<span className='comment'>{`# This code is contributed by Adnan Aliakbar`}</span>{`
 
+`} <hr/> {` Output:
+
+Sorted array: 
+1 5 7 8 9 10 
 `}
                 </code>
             </pre>

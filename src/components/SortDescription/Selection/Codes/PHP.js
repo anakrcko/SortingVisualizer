@@ -6,46 +6,48 @@ export default function PHP(){
                     {
                     `
 <?php
-// PHP program for implementation
-// of selection sort
-function selection_sort(&$arr, $n)
+`}<span className='comment'>{`// PHP program for implementation
+// of selection sort`}</span>{`
+`}<span className='red'>{`function`}</span>{` selection_sort(&`}<span className='variables'>{`$arr`}</span>{`, `}<span className='variables'>{`$n`}</span>{`)
 {
-	for($i = 0; $i < $n ; $i++)
+	`}<span className='red'>{`for`}</span>{` (`}<span className='variables'>{`$i`}</span>{` = 0; `}<span className='variables'>{`$i`}</span>{` < `}<span className='variables'>{`$n`}</span>{` ; `}<span className='variables'>{`$i`}</span>{`++)
 	{
-		$low = $i;
-		for($j = $i + 1; $j < $n ; $j++)
+		`}<span className='variables'>{`$low`}</span>{` = `}<span className='variables'>{`$i`}</span>{`;
+		`}<span className='red'>{`for`}</span>{` (`}<span className='variables'>{`$j`}</span>{` = `}<span className='variables'>{`$i`}</span>{` + 1; `}<span className='variables'>{`$j`}</span>{` < `}<span className='variables'>{`$n`}</span>{` ; `}<span className='variables'>{`$j`}</span>{`++)
 		{
-			if ($arr[$j] < $arr[$low])
+			`}<span className='red'>{`if`}</span>{` (`}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$j`}</span>{`] < `}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$low`}</span>{`])
 			{
-				$low = $j;
+				`}<span className='variables'>{`$low`}</span>{` = `}<span className='variables'>{`$j`}</span>{`;
 			}
 		}
 		
-		// swap the minimum value to $ith node
-		if ($arr[$i] > $arr[$low])
+		`}<span className='comment'>{`// swap the minimum value to $ith node`}</span>{`
+		`}<span className='red'>{`if`}</span>{` (`}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$i`}</span>{`] > `}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$low`}</span>{`])
 		{
-			$tmp = $arr[$i];
-			$arr[$i] = $arr[$low];
-			$arr[$low] = $tmp;
+			`}<span className='variables'>{`$tmp`}</span>{` = `}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$i`}</span>{`];
+			`}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$i`}</span>{`] = `}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$low`}</span>{`];
+			`}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$low`}</span>{`] = `}<span className='variables'>{`$tmp`}</span>{`;
 		}
 	}
 }
 
-// Driver Code
-$arr = array(64, 25, 12, 22, 11);
-$len = count($arr);
-selection_sort($arr, $len);
-echo "Sorted array : \n";
+`}<span className='comment'>{`// Driver Code`}</span>{`
+`}<span className='variables'>{`$arr`}</span>{` = `}<span className='red'>{`array`}</span>{`(64, 25, 12, 22, 11);
+`}<span className='variables'>{`$len`}</span>{` = `}<span className='blue'>{`count`}</span>{`(`}<span className='variables'>{`$arr`}</span>{`);
+selection_sort(`}<span className='variables'>{`$arr`}</span>{`, `}<span className='variables'>{`$len`}</span>{`);
+`}<span className='blue'>{`echo`}</span>{` `}<span className='print'>{`"Sorted array: \\n"`}</span>{`;
 
-for ($i = 0; $i < $len; $i++)
-	echo $arr[$i] . " ";
+`}<span className='red'>{`for`}</span>{`  (`}<span className='variables'>{`$i`}</span>{` = 0; `}<span className='variables'>{`$i`}</span>{` < `}<span className='variables'>{`$len`}</span>{`;`}<span className='variables'>{` $i`}</span>{`++)
+	`}<span className='blue'>{`echo`}</span>{` `}<span className='variables'>{`$arr`}</span>{`[`}<span className='variables'>{`$i`}</span>{`] . `}<span className='print'>{`" "`}</span>{`;
 
-// This code is contributed
-// by Deepika Gupta.
+`}<span className='comment'>{`// This code is contributed
+// by Deepika Gupta.`}</span>{`
 ?>
 
-                    `
-                    }
+`} <hr/> {` Output:
+
+Sorted array: 
+11 12 22 25 64`}
                 </code>
             </pre>
         </div>

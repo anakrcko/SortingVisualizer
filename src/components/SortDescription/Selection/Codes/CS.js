@@ -5,56 +5,58 @@ export default function CS(){
                 <code>
                     {
                     `
-// C# program for implementation
-// of Selection Sort
-using System;
+`}<span className='comment'>{`// C# program for implementation
+// of Selection Sort`}</span>{`
+`}<span className='red'>{`using`}</span>{` System;
 
-class GFG
+`}<span className='red'>{`class`}</span>{` GFG
 {
-	static void sort(int []arr)
+	`}<span className='red'>{`static void sort`}</span>{`(`}<span className='red'>{`int`}</span>{` []arr)
 	{
-		int n = arr.Length;
+		`}<span className='red'>{`int`}</span>{` n = arr.Length;
 
-		// One by one move boundary of unsorted subarray
-		for (int i = 0; i < n - 1; i++)
+		`}<span className='comment'>{`// One by one move boundary of unsorted subarray`}</span>{`
+		`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` i = 0; i < n - 1; i++)
 		{
-			// Find the minimum element in unsorted array
-			int min_idx = i;
-			for (int j = i + 1; j < n; j++)
-				if (arr[j] < arr[min_idx])
+			`}<span className='comment'>{`// Find the minimum element in unsorted array`}</span>{`
+			`}<span className='red'>{`int`}</span>{` min_idx = i;
+			`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` j = i + 1; j < n; j++)
+				`}<span className='red'>{`if`}</span>{` (arr[j] < arr[min_idx])
 					min_idx = j;
 
-			// Swap the found minimum element with the first
-			// element
-			int temp = arr[min_idx];
+			`}<span className='comment'>{`// Swap the found minimum element with the first
+			// element`}</span>{`
+			`}<span className='red'>{`int`}</span>{` temp = arr[min_idx];
 			arr[min_idx] = arr[i];
 			arr[i] = temp;
 		}
 	}
 
-	// Prints the array
-	static void printArray(int []arr)
+	`}<span className='comment'>{`// Prints the array`}</span>{`
+	`}<span className='red'>{`static void`}</span>{` printArray(`}<span className='red'>{`int`}</span>{` []arr)
 	{
-		int n = arr.Length;
-		for (int i=0; i<n; ++i)
-			Console.Write(arr[i]+" ");
+		`}<span className='red'>{`int`}</span>{` n = arr.Length;
+		`}<span className='red'>{`for`}</span>{` (`}<span className='red'>{`int`}</span>{` i=0; i<n; ++i)
+			Console.Write(arr[i]+`}<span className='print'>{`" "`}</span>{`);
 		Console.WriteLine();
 	}
 
-	// Driver code
-	public static void Main()
+	`}<span className='comment'>{`// Driver code`}</span>{`
+	`}<span className='red'>{`public static void`}</span>{` Main()
 	{
-		int []arr = {64,25,12,22,11};
+		`}<span className='red'>{`int`}</span>{` []arr = {64,25,12,22,11};
 		sort(arr);
-		Console.WriteLine("Sorted array");
+		Console.WriteLine(`}<span className='print'>{`"Sorted array"`}</span>{`);
 		printArray(arr);
 	}
 
 }
-// This code is contributed by Sam007
+`}<span className='comment'>{`// This code is contributed by Sam007`}</span>{`
 
-                    `
-                    }
+`} <hr/> {` Output:
+
+Sorted array: 
+11 12 22 25 64`}
                 </code>
             </pre>
         </div>
