@@ -44,8 +44,8 @@ function ArrayHandler({
                 arrayLengthPOM < 20 ? 12 : 
                     arrayLengthPOM < 40 ? 11 : 10   
     const add = 
-        arrayLengthPOM < 5 ? 150 : 
-            arrayLengthPOM < 10 ? 120 : 
+        arrayLengthPOM < 5 ? 120 : 
+            arrayLengthPOM < 10 ? 110 : 
                 arrayLengthPOM < 30 ? 100 : 
                         arrayLengthPOM < 50 ? 80 :
                                 arrayLengthPOM < 70 ? 60 :
@@ -61,7 +61,7 @@ function ArrayHandler({
                         arrayLengthPOM < 40 ? 3 : 
                             arrayLengthPOM < 60 ? 2.5 : 
                                 arrayLengthPOM < 80 ? 2 : 
-                                    arrayLengthPOM < 100 ? 1.5 : 1
+                                    arrayLengthPOM < 100 ? 1.8 : 1.5
     const margin = `${numMargin}px`
 
     return (
@@ -86,11 +86,13 @@ function ArrayHandler({
                         </button>
                     </li>
                     <li>
-                        <label>
-                            {language === 'sr' ? 
-                                        'Uneti elemente niza (sa razmakom) ' : 'Enter string elements (spaced)' }
-                        </label>
-                        <input type='text' value={inputArray} onChange={handleInputArray} disabled={isSorting}/>
+                        <div>
+                            <label>
+                                {language === 'sr' ? 
+                                            'Uneti elemente niza (sa razmakom) ' : 'Enter string elements (spaced)' }
+                            </label>
+                            <input type='text' value={inputArray} onChange={handleInputArray} disabled={isSorting}/>
+                        </div>
                     </li>
                     <li>
                         <button onClick={generateArray} disabled={isSorting}>

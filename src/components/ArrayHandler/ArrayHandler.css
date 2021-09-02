@@ -49,7 +49,7 @@
     width:90%;
 }
 
-.settings select, input[type='range']{
+.settings select, input[type='range'], input[type='text']{
     cursor: pointer;
     margin: 0 10px;
 }
@@ -72,7 +72,6 @@
     font-size: 1em;
     padding: 13px 10px;
 }
-
 
 
 @media(max-width: 992px){
