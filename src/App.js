@@ -27,10 +27,10 @@ function App() {
 	const [swapingElements, setElementsToSwap] = useState([])
 	const [sortedElements, setSortedElements] = useState([])
 	const [language, setLanguage] = useState('sr')
-	const [inputArray, setInputArray] = useState('')
+	const [inputArray, setInputArray] = useState("")
 	const [generate, setGenerate] = useState(false)
 	const [codeLanguage, setCodeLanguage] = useState('Python')
-
+	
 	function generateNewArrayRandom (arrayLength){
 		setCompleted(false)
 		setSorting(false)
@@ -44,20 +44,24 @@ function App() {
 		setArray(randomArray)
 	}
 
-	function generateNewArray(){
-		setCompleted(false)
-		setSorting(false)
-		setSortedElements([])
-		setGenerate(true)
-		
-		const pomArray =  inputArray.split(" ")
-		const generatedArray = []
-		const length = pomArray.length
-		for(let i=0; i<length; i++){
-			generatedArray[i] = Number(pomArray[i])
-		}
-		setArray(generatedArray)
-		//setArrayLenght(length)
+	function generateNewArray(inputArray){
+			setCompleted(false)
+			setSorting(false)
+			setSortedElements([])
+			setGenerate(true)	//ovo mi sluzi kao indikacija da li se unosi ili je random
+			//jer ako se unosi onda racunam max od unetih brojeva za prikaz u arrayHandler-u
+
+			let j=0
+			const pomArray =  inputArray.split(" ")
+			const generatedArray = []
+			const length = pomArray.length
+			for(let i=0; i<length; i++){
+				let number = Number(pomArray[i])
+				if(isNaN(number) === false)
+					generatedArray[j++] = Number(pomArray[i])
+			}
+			setArray(generatedArray)
+			// setInputArray('')
 	}
 	function handleAlgorithm(event) {
 		setAlgorithm(event.target.value)
@@ -152,7 +156,7 @@ function App() {
 				swapingElements={isSorting && swapingElements}
 				sortedElements={sortedElements} 
 				generateArrayRandom={() => generateNewArrayRandom(arrayLength)}
-				generateArray={() => generateNewArray()}
+				generateArray={() => generateNewArray(inputArray)}
 				handleArrayLength={handleArrayLength} 
 				handleSortingSpeed={handleSortingSpeed}
 				handleAlgorithm={handleAlgorithm}

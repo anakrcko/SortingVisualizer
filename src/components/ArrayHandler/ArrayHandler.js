@@ -1,8 +1,7 @@
 import React from 'react'
 import './ArrayHandler.css'
-function findMax(inputArray){
-    const pomArray =  inputArray.split(" ")
-    return Math.max.apply(null, pomArray);
+function findMax(array){
+    return Math.max.apply(null, array);
 }
 function ArrayHandler({ 
                     array,
@@ -23,7 +22,9 @@ function ArrayHandler({
                     inputArray,
                     handleInputArray,
                     generate,
-                    language
+                    language,
+                    // handlePause,
+                    handleStop
                     }){
     
     const barColors = {
@@ -35,7 +36,7 @@ function ArrayHandler({
     
     const arrayLengthPOM = 
         generate ?
-            findMax(inputArray) :  array.length
+            findMax(array) :  array.length
             
 
     const fontSize = 
@@ -85,6 +86,15 @@ function ArrayHandler({
                                         'Generiši nov niz' : 'Generate new array' }
                         </button>
                     </li>
+                    {/* <li>
+                    <form onSubmit={generateArray}>
+                            <label>
+                            Name:
+                            <input type="text" value={inputArray} onChange={handleInputArray} />
+                            </label>
+                            <input type="submit" value="Submit" />
+                        </form>
+                        </li> */}
                     <li>
                         <div>
                             <label>
@@ -100,7 +110,7 @@ function ArrayHandler({
                                         'Generiši niz' : 'Generate array' }
                         </button>
                     </li>
-                    <br/><br/>
+                    <br/>
                     <li>
                         <div>
                             <label>
@@ -125,6 +135,18 @@ function ArrayHandler({
                                     'Sortiraj' : 'Sort' }
                         </button>
                     </li>
+                    {/* <li>
+                        <button onClick={handlePause} disabled={isSorting === false || isCompleted}>
+                            {language === 'sr' ? 
+                                    'Pauziraj' : 'Pause' }
+                        </button>
+                    </li> */}
+                    {/* <li>
+                        <button onClick={handleStop} disabled={isSorting === false || isCompleted}>
+                            {language === 'sr' ? 
+                                    'Stopiraj' : 'Stop' }
+                        </button>
+                    </li> */}
                 </ul>
             </div>
 
